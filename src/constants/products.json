@@ -1,0 +1,87 @@
+[
+  {
+    "id": "1",
+    "name": "Processador AMD Ryzen 7 5700X",
+    "description": "Excelente desempenho para jogos e multitarefas pesadas com 8 núcleos e 16 threads.",
+    "price": 1199.00,
+    "originalPrice": 1499.00,
+    "imageUrl": "https://images.unsplash.com/photo-1591488320449-011701bb6704?w=500&q=80",
+    "category": "Hardware",
+    "stock": 12,
+    "featured": true
+  },
+  {
+    "id": "2",
+    "name": "Placa-Mãe MSI B550M Pro-VDH WiFi",
+    "description": "Placa-mãe robusta com suporte a PCIe 4.0, dissipadores eficientes e Wi-Fi integrado.",
+    "price": 749.90,
+    "imageUrl": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=500&q=80",
+    "category": "Hardware",
+    "stock": 8,
+    "featured": true
+  },
+  {
+    "id": "3",
+    "name": "Monitor Gamer AOC AGON 27\" Quad HD",
+    "description": "Monitor premium de 27 polegadas com resolução QHD, painel rápido e alta taxa de atualização.",
+    "price": 1899.00,
+    "originalPrice": 2299.00,
+    "imageUrl": "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=500&q=80",
+    "category": "Monitores",
+    "stock": 5,
+    "featured": true
+  },
+  {
+    "id": "4",
+    "name": "Teclado Mecânico RGB Switch Blue",
+    "description": "Teclado mecânico compacto com retroiluminação RGB customizável e switches táteis.",
+    "price": 249.90,
+    "imageUrl": "https://images.unsplash.com/photo-1618384887929-16ec33fab9ef?w=500&q=80",
+    "category": "Periféricos",
+    "stock": 20,
+    "featured": true
+  },
+  {
+    "id": "5",
+    "name": "Mouse Gamer Ultraleve 16000 DPI",
+    "description": "Mouse ergonômico com sensor óptico de alta precisão, switches ópticos e cabo paracord flexível.",
+    "price": 189.90,
+    "originalPrice": 249.90,
+    "imageUrl": "https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?w=500&q=80",
+    "category": "Periféricos",
+    "stock": 15,
+    "featured": true
+  },
+  {
+    "id": "6",
+    "name": "Placa de Vídeo AMD Radeon RX 7600 XT",
+    "description": "Desempenho gráfico de próxima geração com 16GB de memória GDDR6, ideal para jogar em 1080p e 1440p.",
+    "price": 2399.00,
+    "originalPrice": 2799.00,
+    "imageUrl": "https://images.unsplash.com/photo-1587202372775-e229f172b9d7?w=500&q=80",
+    "category": "Hardware",
+    "stock": 4,
+    "featured": true
+  },
+  {
+    "id": "7",
+    "name": "Memória RAM 16GB DDR4 3200MHz RGB",
+    "description": "Módulo de alto desempenho com dissipador de alumínio e iluminação ARGB sincronizável.",
+    "price": 329.90,
+    "imageUrl": "https://images.unsplash.com/photo-1562976540-1502c2145186?w=500&q=80",
+    "category": "Hardware",
+    "stock": 32,
+    "featured": true
+  },
+  {
+    "id": "11",
+    "name": "Monitor UltraWide 34\" Curvo 165Hz",
+    "description": "Imersão total com tela ultra-ampla de 21:9, curvatura 1500R e HDR para máxima fidelidade visual.",
+    "price": 2799.00,
+    "originalPrice": 3199.00,
+    "imageUrl": "https://images.unsplash.com/photo-1551645121-d1034da75057?w=500&q=80",
+    "category": "Monitores",
+    "stock": 3,
+    "featured": true
+  }
+]

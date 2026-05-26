@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+main{
+  gap: 50px;
+}
+
+:root {
+  --swiper-theme-color: #10b981; 
+  --swiper-pagination-bullet-inactive-color: #d4d4d8;
+  --swiper-pagination-bullet-inactive-opacity: 1;
+  --swiper-pagination-bullet-size: 8px;
+  --swiper-pagination-bullet-horizontal-gap: 6px;
+}
+
+/* Permite que as bolinhas apareçam mesmo estando fora do bloco principal do Swiper */
+.product-swiper {
+  overflow: hidden !important;
+  padding-bottom: 50px !important; 
+}
+
+/* Garante que os cards ocupem a mesma altura e se alinhem perfeitamente em linha */
+.swiper-wrapper {
+  display: flex !important;
+  flex-direction: row !important;
+}
+
+/* Posiciona as bolinhas perfeitamente no seu -30px sem que elas sumam */
+.swiper-pagination-dns,
+.swiper-pagination.swiper-pagination-bullets {
+  bottom: 10px !important; /* Como aumentamos o padding-bottom em 50px, o 'bottom: 10px' vai fazer elas parecerem exatamente a -30px da base real do card */
+}
+
+.relative .swiper-pagination-bullet {
+  --swiper-theme-color: #10b981;
+  --swiper-pagination-bullet-inactive-color: #ffffff;
+}
+
+/* Customização segura para o Swiper de Categorias */
+.category-swiper {
+  overflow: hidden !important;
+  padding-bottom: 40px !important;
+  margin-bottom: -40px !important;
+}
+
+.category-swiper .swiper-pagination-dns,
+.category-swiper .swiper-pagination.swiper-pagination-bullets {
+  bottom: 4px !important;
+}
