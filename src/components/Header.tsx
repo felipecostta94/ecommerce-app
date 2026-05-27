@@ -1,10 +1,12 @@
 import { useState } from 'react';
-import { ShoppingBag, Menu, X, Search, User } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { useCart } from './CartContext';
+import { ShoppingBag, Menu, X, Search, User, ShoppingCart } from 'lucide-react';
 import { HEADER_LINKS } from '../constants/navigation';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const cartCount = 0;
+  const { cartCount } = useCart();;
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-zinc-200 bg-white/80 backdrop-blur-md">
@@ -12,9 +14,9 @@ export default function Header() {
         
         {/* Logo */}
         <div className="flex items-center">
-          <a href="#" className="text-3xl font-bold tracking-tight text-zinc-900">
+          <Link to="/" className="text-xl font-black text-zinc-900 tracking-tight">
             TECH<span className="text-emerald-500">STORE</span>
-          </a>
+          </Link>
         </div>
 
         {/* Menu Desktop (Dinâmico) */}
@@ -32,26 +34,34 @@ export default function Header() {
 
         {/* Ícones de Ação */}
         <div className="flex items-center space-x-4">
-          <button className="cursor-pointer text-zinc-600 transition-colors hover:text-emerald-500 max-sm:hidden">
+          {/* Pesquisa (Mobile Hidden) */}
+          <button className="cursor-pointer text-zinc-600 transition-colors hover:text-emerald-500 max-sm:hidden focus:outline-none">
             <Search className="h-5 w-5" />
           </button>
           
-          <button className="cursor-pointer text-zinc-600 transition-colors hover:text-emerald-500">
+          {/* Usuário / Minha Conta */}
+          <button className="cursor-pointer text-zinc-600 transition-colors hover:text-emerald-500 focus:outline-none">
             <User className="h-5 w-5" />
           </button>
-
-          <button className="cursor-pointer group relative flex items-center p-2 text-zinc-600 transition-colors hover:text-emerald-500">
-            <ShoppingBag className="h-5 w-5 shrink-0" />
+          
+          {/* Carrinho de Compras Otimizado */}
+          <Link 
+            to="/cart" className="relative p-2 text-zinc-600 transition-colors hover:text-emerald-500 cursor-pointer focus:outline-none"
+            title="Ver carrinho"
+          >
+            <ShoppingCart className="h-5 w-5" />
             {cartCount > 0 && (
-              <span className="absolute top-0 right-0 inline-flex items-center justify-center rounded-full bg-emerald-500 px-1.5 py-0.5 text-xs font-bold text-white">
+              <span className="absolute top-0 right-0 inline-flex h-5 min-w-[20px] items-center justify-center rounded-full bg-emerald-500 px-1 text-[10px] font-black leading-none text-white shadow-sm transform translate-x-1/3 -translate-y-1/3 animate-fade-in">
                 {cartCount}
               </span>
             )}
-          </button>
+          </Link>
 
+          {/* Menu Hamburguer (Mobile Only) */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="rounded-md p-2 text-zinc-600 hover:bg-zinc-100 hover:text-zinc-900 md:hidden">
+            className="rounded-md p-2 text-zinc-600 hover:bg-zinc-100 hover:text-zinc-900 md:hidden focus:outline-none"
+          >
             {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
         </div>

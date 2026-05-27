@@ -5,7 +5,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 
 import ProductCard from './ProductCard';
-import productsData from '../constants/products.json';
+import productsData from '../data/products.json';
 import type { Product } from '../types/ecommerce';
 
 const products = productsData as Product[];

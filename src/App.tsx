@@ -1,37 +1,24 @@
-import Header from './components/Header';
-import Footer from './components/Footer';
-import HomeBanner from './components/HomeBanner';
-import CategoryCarousel from './components/CategoryCarousel'; // Importando o novo bloco
-import ProductCarousel from './components/ProductCarousel';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import RootLayout from './layouts/RootLayout';
+import Home from './pages/Home';
+import Cart from './pages/Cart';
+import ProductDetail from './pages/ProductDetail';
+
+// Configurando as rotas no padrão moderno Data Router (v6)
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <RootLayout />, // O layout que envelopa o site (Header, Footer, Provider)
+    children: [
+      { index: true,  element: <Home />, },
+      { path: 'cart', element: <Cart />, },
+      { path: 'product/:id', element: <ProductDetail /> },
+    ],
+  },
+]);
 
 function App() {
-  return (
-    <div className="flex min-h-screen flex-col bg-zinc-50 text-zinc-900">
-      <Header />
-      
-      <main className="w-full flex-grow">
-        {/* 1. SEÇÃO: Banner Principal (Full Screen lateral) */}
-        <HomeBanner />
-
-        {/* Espaçamento controlado de 100px entre os blocos da Home */}
-        <div className="my-[100px] space-y-[100px]">
-          
-          {/* 2. SEÇÃO: Carrossel de Categorias (Limitada na Grid) */}
-          <section className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
-            <CategoryCarousel />
-          </section>
-          
-          {/* 3. SEÇÃO: Vitrine de Produtos (Limitada na Grid) */}
-          <section className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
-            <ProductCarousel />
-          </section>
-          
-        </div>
-      </main>
-
-      <Footer />
-    </div>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;

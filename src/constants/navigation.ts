@@ -11,7 +11,6 @@ export interface FooterSection{
 export const HEADER_LINKS: NavigationLink[] = [
     { label: 'Home', href: '#'},
     { label: 'Produtos', href: '#'},
-    { label: 'Categorias', href: '#'},
     { label: 'Contato', href: '#'},
 ];
 
